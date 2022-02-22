@@ -8,12 +8,40 @@
     <script src="codemirror/lib/codemirror.js"></script>
     <link rel="stylesheet" href="codemirror/lib/codemirror.css">
     <script src="codemirror/mode/python/python.js"></script>
-    <link rel="stylesheet" href="codemirror/theme/abbott.css">
+    <link rel="stylesheet" href="codemirror/theme/dracula.css">
     <script src="codemirror/addon/fold/foldcode.js"></script>
     <script src="codemirror/addon/fold/foldcode.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&family=Open+Sans:wght@300&display=swap" 
+    rel="stylesheet">
 </head>
 <body>
-    <textarea id="editor"># write your code here!</textarea>
+    <div class="page-container">
+        <div class="assignment-area">
+            <div class="assignment-title">
+                <h1><em>Hello World</em> in Python!</h1>
+                <p id="class-name"><em>Programming 101</em></p>
+                <p>Hi students, welcome to Programming 101! You all
+                    listened so well in class earlier so I'm sure 
+                    today's homework will be a breeze.
+                </p>
+                <p>As a small test to see if you really <em>were</em>
+                listening, the first task is to write how you would
+                say <em>Hello World</em> in Python. Use the text area 
+                on the right to write out the code, and then press 
+                submit once you're done. Happy coding!</p>
+            </div>
+        </div>
+        <div class="code-area">
+            <textarea id="editor"># write your code here!</textarea>
+            <button id="submit">Submit</button>
+        </div>
+    </div>
+    
     <script>
         var editor = CodeMirror.fromTextArea
         (document.getElementById('editor'), {
@@ -25,7 +53,7 @@
             lineNumbers: true,
             indentUnit: 4,
             matchBrackets: true,
-            theme: "abbott",
+            theme: "dracula",
             foldGutter: true,
             gutters: ["CodeMirror-linenumbers", "Codemirror-foldgutter"]
         });
