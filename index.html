@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="codemirror/lib/codemirror.css">
     <script src="codemirror/mode/python/python.js"></script>
     <link rel="stylesheet" href="codemirror/theme/abbott.css">
+    <script src="codemirror/addon/fold/foldcode.js"></script>
+    <script src="codemirror/addon/fold/foldcode.js"></script>
 </head>
 <body>
     <textarea id="editor"># write your code here!</textarea>
@@ -23,7 +25,9 @@
             lineNumbers: true,
             indentUnit: 4,
             matchBrackets: true,
-            theme: "abbott"
+            theme: "abbott",
+            foldGutter: true,
+            gutters: ["CodeMirror-linenumbers", "Codemirror-foldgutter"]
         });
     </script>
 </body>
